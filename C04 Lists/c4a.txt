@@ -1,0 +1,20 @@
+1. An empty list value
+2. spam[2] = 'hello'
+3. an error, but you can spam[int(int('3' * 2) / 11] and it
+will work as intended giving us 'd'
+4. last element in the list 'd'
+5. first two elements in the list
+6. 1
+7. it adds integer 99 as the last element
+8. removes the first 'cat' t index 1
+9. + concatenation, * replication
+10.append adds an element to the end of the list (it extends it)
+insert inserts to a given index number
+11.use del(), remove() or pop()
+12.you can reach, edit given index in both string and list, 
+have length value, use in for loops, concatenate, replicate
+13.tuple cannot be edited
+14.var = (42,)
+15.use tuple() and list() 
+16.references to the list values
+17.deepcopy() copies also the inner lists

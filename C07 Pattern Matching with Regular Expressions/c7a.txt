@@ -1,0 +1,35 @@
+1. re.compile()
+2. to avoid typing escape sign
+3. a Match object
+4. use group() method
+5. group 0 - Whole expression (including hyphen between groups), 
+group 1 -  first three digits (first parentheses)
+group 2 - three digits, a hyphen followed by four digits (second parentheses)
+6. \( \) \.
+7. if there are no groups in regular expression it will return a list of 
+strings, if there are groups in regex it will return a list of tuples
+8. it works kind of like OR operator, that matches one of many expressions
+9. placed in regex after parenthesis makes the expression in parenthesis
+optional - matches 0 or more of the preceding group,; explicitly says to
+use nongreedy matching
+10. * matches zero or more, while + matches one or more, so the expression
+has to occur at least one time in searched string,
+11. {3} matches exactly three of the preceding group, while {3,5} matches
+three to five occurences of the preceding group
+12. \d numeric digit 0-9,; \w any letter, numeric digit, underscore character,;
+\s any space, tab, newiline character
+13. \D any character that is not a numeric digit,; \W any character that is
+not a letter, digit or underscore,; \S any character that is not a space,
+tab or newline,;
+14. re.compile(r'regex', re.IGNORECASE) (or just re.I),
+15. . wildcard character matches any character except newline,; when 
+re.DOTALL is passed then it matches all characters including new line
+16. .* matches any and all characters in a greedy way (the longest match),
+while .*? matches the same in a nongreedy way
+17. [a-z0-9]
+18. X drummers, X pipers, five rings, X hens
+19. to format regular expression, so it is more readable, (for programmer)
+20. ????
+21. re.compile(r'[A-Z]\w*\sNakamoto')
+22. re.compile(r'(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|cats|baseballs)\.',
+re.IGNORECASE)

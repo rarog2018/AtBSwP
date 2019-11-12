@@ -1,0 +1,12 @@
+1. Operators: * - / + 
+   Values: 'hello' -88.8 5
+2. variable: spam, string: 'spam'
+3. int, float, string
+4. a value and an operator. Evaluate to  a single value
+5. statement does not evaluate to a single value
+6. 20
+7. spamspamspam both
+8. because variable names cannot start with a number
+9. int() float() str()
+10.99 is not a string. str(99)
+11.

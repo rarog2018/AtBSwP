@@ -1,0 +1,7 @@
+1. shutil.copy() copies only a single file from a given path, while 
+shutil.copytree() copies the folder at the source path along with all of
+its files and subfolders
+2. shutil.move() can rename a file
+3. send2trash does not delete files permanently but sends them to the 
+recycle bin instead, shutil module can delete files permanently
+4. zipfile.ZipFile()

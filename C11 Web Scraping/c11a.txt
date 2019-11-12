@@ -1,0 +1,24 @@
+1. webbrowser only opens the website, requests can download content from
+the website, beautifulsoup can parse HTML, selenium lets python directly 
+control the browser,
+2. Response object, through the Response object's attributes (text)
+res.text
+3. .raise_for_status()
+4. res.status_code == requests.codes.ok
+5. varFile = open('textfile.txt', 'wb')
+   for chunk in res.iter_content(100 000):
+	varFile.write(chunk)
+6. ctrl+shift+i in my case
+7. by using inspect element option after right-clicking the specific element
+8. '#main'
+9. '.highlight'
+10.'div div'
+11.'button[value="favorite"]'
+12.spam.getText()
+13.linkElem.attrs
+14.from selenium import webdriver
+15.find_element_* finds only the first matched element, while the latter
+finds all the elements that match
+16.click(), submit(), send_keys()
+17.submit()
+18. browser.back(), .forward(), .refresh()

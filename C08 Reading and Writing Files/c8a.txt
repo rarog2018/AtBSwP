@@ -1,0 +1,12 @@
+1. Current working directory
+2. Root folder
+3. os.getcwd() returns a path to current working directory and os.chdir(path)
+changes directory to 'path'
+4. (.) "this directory", (..) "the parent folder" - the folder that is 
+inside a folder that is a parent to our current working directory
+5. dir: C:\bacon\eggs  base: spam.txt
+6. 'w' write mode, 'r' read mode, 'a' append mode
+7. its content gets deleted and we start writing from the start of the file
+8. readlines() reurns a list of strings in which each element is a line 
+that ends in '\n', while read() returns a single string
+9. dictionary

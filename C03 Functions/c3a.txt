@@ -1,0 +1,16 @@
+1. because you can use once written code multiple times, program
+functionalities and use them whenever you want
+2. is called
+3. def statement
+4. function is a definition and call is execution
+5. 1, unlimited
+6. they are being destroyed
+7. is a value of a function, yes
+8. None
+9. using global statement
+10.it is a special data type that contains no value, NoneType
+11.imports a module called ...
+12.spam.bacon()
+13.use try except blocks, exception handle
+14.the code that we want to execute, how to handle the situation
+if the code can't be executed

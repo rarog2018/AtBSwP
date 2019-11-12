@@ -1,0 +1,13 @@
+1. \ and a symbol that performs certain action like f.e. add
+a new line or tab
+2. new line, tab
+3. \\ or use ''' ''' or raw string
+4. because everything is inside double quotation mark
+5. use triple quotation and just format it like normal text
+using 'enter' for new lines
+6. e; Hello; Hello; lo world!;
+7. HELLO; True; hello;
+8. ['Remember,', 'remember,', 'the', 'fifth', 'of', 'November.']
+   'There-can-be-only-one.'
+9. rjust(), ljust(), center()
+10.rstrip() lstrip() strip()

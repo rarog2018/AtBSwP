@@ -1,0 +1,23 @@
+1. assert (spam >= 10, 'AssertionError')
+2. assert (eggs.lower() != bacon.lower(), 'AssertionError')
+3. assert (False, 'AssertionError')
+4. import logging
+   logging.basicConfig(args)
+5. import logging
+   logging.basicConfig(filename = 'programLog.txt', args)
+6. DEBUG, INFO, WARNING, ERROR, CRITICAL
+7. logging.disable(logging.CRITICAL)
+8. it can be easily disabled, and easily stored in a file
+and is less error prone, and overaly easier to use, and
+you can disable only specific levels of this messages
+9. step executes next line of code, and when it is a function
+it goes inside it
+   over does the same as step, except when there is a function
+over does not go inside it,
+   out executes lines of code at full speed until it
+returns from current function
+10.at the breakpoint or at the end of the program if there
+are no breakpoints
+11.breakpoint forces the debugger to pause when it reaches
+the line that breakpoint is pointed to
+12.right-click and 'Set Breakpoint'

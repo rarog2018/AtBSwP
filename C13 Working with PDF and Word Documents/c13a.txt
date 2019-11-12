@@ -1,0 +1,16 @@
+1. PdfFileObject returned from open(), which is just a standard File Object
+2. 'rb' for PdfFileReader(), 'wb' for PdfFileWriter
+3. getPage(4)
+4. numPages
+5. decrypt('swordfish')
+6. rotateClockwise(n), rotateCounterClockwise(n)
+7. docx.Document('demo.docx')
+8. Paragraph Object represents a paragraph which contains Run Objects, so
+a Run Object is an element of Paragraph Object
+9. doc.paragraphs
+10.Run Object
+11.True - text will be bold, False - text won't be bold, None - it depends
+on the Style that is used for this particular object
+12.docx.Document('file.docx')
+13.doc.add_paragraph('Hello there!')
+14.1, 2, 3, 4
