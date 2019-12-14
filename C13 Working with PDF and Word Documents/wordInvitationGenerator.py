@@ -55,15 +55,36 @@ for name_n in range(len(names)):
     for line_n in range(len(textLst)):
         print("Adding line " + str(line_n + 1) + "...")
         if textLst[line_n][0] == "name":
-            paraObj = doc.add_paragraph(names[name_n].rstrip(), 'Caption')
-            doc.paragraphs[len(doc.paragraphs)-1].runs[0].underline = True
+            paraObj = doc.add_paragraph(names[name_n].rstrip(), 'Normal')
+            run = paraObj.runs[0]
+            font = run.font
+            font.size = docx.shared.Pt(18)
+            font.bold = True
+            #doc.paragraphs[len(doc.paragraphs)-1].runs[0].underline = True
         else:
-            paraObj = doc.add_paragraph(textLst[line_n][0])
+            paraObj = doc.add_paragraph(textLst[line_n][0], 'Normal')
+            if not line_n % 2:
+                run = paraObj.runs[0]
+                font = run.font
+                font.size = docx.shared.Pt(20)
+                font.name = "Brush Script Std"
+                if line_n != 0:
+                    font.underline = True
+            else:
+                run = paraObj.runs[0]
+                font = run.font
+                font.size = docx.shared.Pt(18)
+
 
         paraObj.alignment = docx.enum.text.WD_ALIGN_PARAGRAPH.CENTER
         if len(textLst[line_n]) > 1:
             for run_n in range(1, len(textLst[line_n])):
                 paraObj.add_run(textLst[line_n][run_n])
+                if not line_n % 2:
+                    run = paraObj.runs[1]
+                    font = run.font
+                    font.size = docx.shared.Pt(20)
+                    font.name = "Brush Script Std"
 
     #       if there are names left add break
     if name_n:
