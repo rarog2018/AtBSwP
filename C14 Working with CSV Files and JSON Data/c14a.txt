@@ -1,0 +1,8 @@
+1. merged cells, cell height, width, style of the text, pictures, charts,
+2. File Object,
+3. reader in 'r', writer in 'w' (useful newline="")
+4. writerow()
+5. delimiter - set what char appears between cells in a row
+lineterminator - character that comes at the end of a row
+6. json.loads()
+7. json.dumps()
