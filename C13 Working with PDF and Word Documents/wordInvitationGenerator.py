@@ -15,8 +15,14 @@
 #       if there are names left add break
 
 import sys, docx, os.path
-from docx import Document
-#from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+def style_text(paraObj, fontName, size=20, run=0, boldness=False, undrln=False):
+    run = paraObj.runs[run]   # create run object
+    font = run.font         # and font object for this run object
+    font.name = fontName    # set font name
+    font.size = docx.shared.Pt(size)  # set font size
+    font.bold = boldness
+    font.underline = undrln
 
 # 1. Check the validity of the text file
 #   a) check if the text file exists
@@ -45,7 +51,7 @@ textLst = [["It would be a pleasure to have the company of"], ["name"],
 
 # 4. Prepare the document itself
 #   a) create a document object
-doc = Document()
+doc = docx.Document()
 doc.save("invitations.docx")
 
 #   b) for every name in name list:
@@ -54,37 +60,34 @@ for name_n in range(len(names)):
     #       add paragraph and style it
     for line_n in range(len(textLst)):
         print("Adding line " + str(line_n + 1) + "...")
+        # check if the element that we work on is a placeholder for name
         if textLst[line_n][0] == "name":
+            # replace it with name that we work on
             paraObj = doc.add_paragraph(names[name_n].rstrip(), 'Normal')
-            run = paraObj.runs[0]
-            font = run.font
-            font.size = docx.shared.Pt(18)
-            font.bold = True
-            #doc.paragraphs[len(doc.paragraphs)-1].runs[0].underline = True
+            # set font style to "TNR" and size to 21, run 0, bold=True
+            style_text(paraObj, "Times New Roman", 18, 0, True)
         else:
             paraObj = doc.add_paragraph(textLst[line_n][0], 'Normal')
+            # for each even line
             if not line_n % 2:
-                run = paraObj.runs[0]
-                font = run.font
-                font.size = docx.shared.Pt(20)
-                font.name = "Brush Script Std"
+                # set font style to "BSS"
+                style_text(paraObj, "Brush Script Std")
                 if line_n != 0:
-                    font.underline = True
+                    # for lines 2, 4 set run 0 underline to True
+                    style_text(paraObj, "Brush Script Std", 20, 0, False, True)
+            # for each uneven line
             else:
-                run = paraObj.runs[0]
-                font = run.font
-                font.size = docx.shared.Pt(18)
+                style_text(paraObj, "Times New Roman", 18)
 
-
+        # adjust paragraph alignment to center
         paraObj.alignment = docx.enum.text.WD_ALIGN_PARAGRAPH.CENTER
         if len(textLst[line_n]) > 1:
+            # adding other run objects to paragraphs
             for run_n in range(1, len(textLst[line_n])):
+                print("Adding run " + str(run_n) + "...")
                 paraObj.add_run(textLst[line_n][run_n])
                 if not line_n % 2:
-                    run = paraObj.runs[1]
-                    font = run.font
-                    font.size = docx.shared.Pt(20)
-                    font.name = "Brush Script Std"
+                    style_text(paraObj, "Brush Script Std", 20, run_n)
 
     #       if there are names left add break
     if name_n:
