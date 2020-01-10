@@ -1,0 +1,11 @@
+1. time reference to 1. 1. 1970 12 AM (UTC) comonly used in programming
+2. time.time()
+3. time.sleep(5)
+4. float rounded to specified number of digits
+5. datetime objects represents specific moment in time, while timedelta
+object represents the duration
+6. threadObj = threading.Thread(target=spam)
+threadObj.start()
+7. do not read or write the same variables as other threads, use variables
+local to that particular thread
+8. subprocess.Popen('C:\\Windows\\System32\\calc.exe')
