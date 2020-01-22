@@ -1,0 +1,13 @@
+1. SMTP (Simple Mail Transfer Protocol) for sending email,
+IMAP (Internet Message Access Protocol) for checking and receiving email,
+2. smtplib.SMTP('smtp server domain name', port), smtpObj.ehlo(), 
+smtpObj.starttls(),  smtpObj.login('email_address@domain.com', 'PASSWORD')
+3. imapclient.IMAPClient('imap server domain name', ssl=True)
+imapObj.login('email_address@domain.com', 'PASSWORD')
+4. an IMAP search key
+5. imaplib._MAXLINE = n, where 'n' is an integer number that should obvio-
+usly be larger than 10000
+6. pyzmail module 
+7. account SID, authentication token, Twilio number,
+
+
