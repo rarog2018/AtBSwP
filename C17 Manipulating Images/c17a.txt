@@ -1,0 +1,11 @@
+1. group of numbers that specify the amount of red, green, blue and alpha
+(transparency) in a pixel,
+2. ImageColor.getcolor('CornflowerBlue', 'RGBA')
+3. a tuple with four integer coordinates that represents a rectangular
+region in an image (Left, Top, Right, Bottom)
+4. Image.open('zophie.png')
+5. width, height = imageObj.size
+6. imageObj.crop((0, 50, 50, 100))
+7. imageObj.save('imagename.ext')
+8. ImageDraw
+9. ImageDraw object; imageDrawObj = ImageDraw.Draw(imageObj)
